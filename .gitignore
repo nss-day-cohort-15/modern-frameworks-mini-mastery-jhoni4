@@ -1,1 +1,7 @@
-flowers.json
+lib/bower_components
+lib/node_modules
+css/
+lib/src
+lib/.sass-cache
+.DS_Store
+app/values/fb-cred.js

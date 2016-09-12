@@ -2,17 +2,16 @@
 
 app.factory("DatabaseFactory", function($q, $http, FirebaseURL) {
 
-  let List = []
+  // let listArray = []
 
 
 
  let getListFromFirebase = () => {
-    let pinsArray = []
     return $q((resolve, reject) => {
-      $http.get(`${FirebaseURL}arrangements.json`)
+      $http.get(`https://flower-power-angular.firebaseio.com/arrangements.json`)
     .success((listObj) => {
-      resolve(listArray)
-      console.log("listArray", listArray)
+      resolve(listObj)
+      // console.log("listObj", listObj)
     })
     .error((error) => {
       reject(error)

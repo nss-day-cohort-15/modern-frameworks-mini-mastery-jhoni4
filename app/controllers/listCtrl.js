@@ -1,17 +1,18 @@
 'use strict';
 
-app.controller("ListCtrl", ($scope, DatabaseFactory ) => {
+app.controller("ListCtrl", function($scope, DatabaseFactory){
 
 
 
+      console.log("list controller");
 
-   $scope.getResult = () => {
+   // $scope.getResult = () => {
       DatabaseFactory.getListFromFirebase()
       .then( (searchObj) => {
         $scope.lists = searchObj;
       console.log("searchObj", searchObj);
       });
-    };
+    // };
 
 
 

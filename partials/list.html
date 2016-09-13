@@ -1,11 +1,10 @@
 
-<div ng-controller="ListCtrl" >
+<div>
   <div ng-repeat="list in lists">
     <h1>product Details</h1>
-    <h2>Category: Holiday</h2>
+    <h2>Category: {{list.category}}</h2>
     <h2>Title: {{list.title}}</h2>
-    <h2>description: {{list.description}}</h2>
-    <h2>price: {{list.price}}</h2>
+    <p>description: {{list.description}}</p>
+    <h3>price: {{list.price}}</h3>
   </div>
-    <button class="btn btn-info" ng-click="getResult()">Add</button>
 </div>

@@ -1,6 +1,6 @@
 "use strict";
 
-app.factory("DatabaseFactory", function($q, $http, FirebaseURL) {
+app.factory("DatabaseFactory", function($q, $http) {
 
   // let listArray = []
 
@@ -10,14 +10,14 @@ app.factory("DatabaseFactory", function($q, $http, FirebaseURL) {
     return $q((resolve, reject) => {
       $http.get(`https://flower-power-angular.firebaseio.com/arrangements.json`)
     .success((listObj) => {
-      resolve(listObj)
-      // console.log("listObj", listObj)
+      resolve(listObj);
+      console.log("listObj", listObj);
     })
     .error((error) => {
-      reject(error)
-      })
-    })
-  }
+      reject(error);
+      });
+    });
+  };
 
 
 
